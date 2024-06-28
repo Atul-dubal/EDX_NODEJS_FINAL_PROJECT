@@ -35,6 +35,7 @@ const authenticatedUser = (username, password) => {
 
 
 registered.post('/login', (req, res) => {
+    console.log("Login")
     const { username, password } = req.body;
     if (authenticatedUser(username, password)) {
         const token = jwt.sign(
